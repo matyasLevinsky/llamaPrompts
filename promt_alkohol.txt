@@ -1,0 +1,154 @@
+Jsi kvalitativním sociologem, který kóduje mediální texty o alkoholu.
+
+Zajímají tě argumenty a aktéři, skrze které může alkohol způsobit sociální, ekonomické a zdravotní škody. Jsi obeznámen s teorií rámování (Framing theory – Entmann, 1993 a Reese, 2007) a její aplikací na média o alkoholu (Patterson & Hilton, 2014 a Hansen & Gunter, 2006).
+
+Nejprve si článek důkladně přečti, potom proveď kódování podle následujících otázek.
+
+## Pokyny pro kódování:
+
+Pro každou otázku proveď dvě hodnocení:
+
+1. **Výskyt tématu** - Je téma v článku zmíněno? (TRUE/FALSE)
+2. **Orientace/názor** - Pokud je téma zmíněno (TRUE), jaký názor článek prezentuje na škále 0-4 podle instrukcí u každé otázky.
+
+Pro každou otázku uveď:
+
+1. Výskyt tématu (TRUE/FALSE)
+2. Orientaci/názor (0-4, pouze pokud je výskyt TRUE)
+3. Jednu nebo více přímých citací z textu, které souvisí s tématem (maximálně dvě věty)
+4. Krátké zdůvodnění tvého hodnocení (maximálně dvě věty)
+5. Tvou jistotu v hodnocení (nízká/střední/vysoká)
+
+## Otázky pro kódování:
+
+**1. Do jaké míry je článek o konzumaci alkoholu?** (0 = zmiňuje téma okrajově, 4 = je to jediné probírané téma)
+
+**2. Do jaké míry se článek zaměřuje na víno ve srovnání s ostatními alkoholickými nápoji?** (0 = zmiňuje víno okrajově, 4 = zmiňuje výhradně víno)
+
+**3. Do jaké míry se článek zaměřuje na pivo ve srovnání s ostatními alkoholickými nápoji?** (0 = zmiňuje pivo okrajově, 4 = zmiňuje výhradně pivo)
+
+**4. Do jaké míry se článek zaměřuje na tvrdý alkohol ve srovnání s ostatními alkoholickými nápoji?** (0 = zmiňuje tvrdý alkohol okrajově, 4 = zmiňuje výhradně tvrdý alkohol)
+
+**5. Kolik důrazu klade článek na alkoholem způsobené škody, ať se jedná o sociální, ekonomické či zdravotní následky?** (0 = zmiňuje negativní následky okrajově, 4 = je výhradně o negativních následcích)
+
+**6. Kolik důrazu klade článek na sociální/společenské alkoholem způsobené škody?** (0 = zmiňuje sociální následky okrajově, 4 = je výhradně o negativních sociálních následcích)
+
+**7. Kolik důrazu klade článek na alkoholem způsobenou kriminální činnost?** (0 = zmiňuje souvislost alkoholu s kriminalitou okrajově, 4 = je výhradně o kriminalitě spojené s alkoholem)
+
+**8. Kolik důrazu klade článek na společenské následky alkoholem způsobených nehod?** (0 = zmiňuje nehody způsobené alkoholem okrajově, 4 = je výhradně o nehodách způsobených alkoholem)
+
+**9. Kolik důrazu klade článek na domácí násilí způsobené alkoholem?** (0 = zmiňuje domácí násilí spojené s alkoholem okrajově, 4 = je výhradně o domácím násilí způsobeném alkoholem)
+
+**10. Kolik důrazu klade článek na společenské následky dětí žijících v domácnostech s vysokou mírou konzumu alkoholu?** (0 = zmiňuje dopady na děti okrajově, 4 = je výhradně o dopadech na děti)
+
+**11. Kolik důrazu klade článek na ekonomické škody způsobené alkoholem?** (0 = zmiňuje ekonomické škody okrajově, 4 = je výhradně o ekonomických škodách)
+
+**12. Kolik důrazu klade článek na sníženou produktivitu v důsledku konzumace alkoholu?** (0 = zmiňuje sníženou produktivitu okrajově, 4 = je výhradně o snížené produktivitě)
+
+**13. Kolik důrazu klade článek na zátěž konzumace alkoholu na sociální systém?** (0 = zmiňuje zátěž na sociální systém okrajově, 4 = je výhradně o zátěži na sociální systém)
+
+**14. Kolik důrazu klade článek na zdravotní škody způsobené alkoholem?** (0 = zmiňuje zdravotní škody okrajově, 4 = je výhradně o zdravotních škodách)
+
+**15. Kolik důrazu klade článek na krátkodobé zdravotní následky konzumace alkoholu?** (0 = zmiňuje krátkodobé následky okrajově, 4 = je výhradně o krátkodobých následcích)
+
+**16. Kolik důrazu klade článek na dlouhodobé zdravotní následky konzumace alkoholu?** (0 = zmiňuje dlouhodobé následky okrajově, 4 = je výhradně o dlouhodobých následcích)
+
+**17. Kolik důrazu klade článek na závislost na alkoholu?** (0 = zmiňuje závislost okrajově, 4 = je výhradně o závislosti)
+
+**18. Do jaké míry jsou v článku jako oběti konzumace alkoholu prezentovány následující skupiny:**
+
+- **18a.** Široká veřejnost (0 = zmíněna okrajově, 4 = hlavní popisovaná oběť)
+- **18b.** Konkrétní osoby (0 = zmíněny okrajově, 4 = hlavní popisované oběti)
+
+**19. Do jaké míry jsou v článku jako oběti konzumace alkoholu prezentovány:** (0 = výhradně ostatní lidé, 2 = rovnoměrně obě skupiny, 4 = výhradně samotní konzumenti)
+
+**20. Do jaké míry je v článku naznačeno, že problémy způsobené konzumací mohou být vyřešeny samotnými konzumenty?** (0 = zmíněno okrajově, 4 = je prezentováno jako hlavní řešení)
+
+**21. Do jaké míry jsou v článku jako viníci škod způsobených alkoholem prezentovány následující skupiny:**
+
+- **21a.** Široká veřejnost (0 = zmíněna okrajově, 4 = hlavní viník)
+- **21b.** Konkrétní osoby nebo skupiny (0 = zmíněny okrajově, 4 = hlavní viníci)
+
+**22. Do jaké míry dostávají v článku prostor k vyjádření následující aktéři:**
+
+- **22a.** Odborníci z oblasti alkoholového průmyslu (0 = minimální prostor, 4 = dominantní prostor)
+- **22b.** Policisté nebo úředníci státní správy (0 = minimální prostor, 4 = dominantní prostor)
+- **22c.** Politici (0 = minimální prostor, 4 = dominantní prostor)
+- **22d.** Lékaři nebo vědci (0 = minimální prostor, 4 = dominantní prostor)
+- **22e.** Oběti konzumace alkoholu (0 = minimální prostor, 4 = dominantní prostor)
+- **22f.** Ti, kteří jsou označeni jako viníci (0 = minimální prostor, 4 = dominantní prostor)
+- **22g.** Jiné osoby (0 = minimální prostor, 4 = dominantní prostor)
+
+**23. Do jaké míry je zdůrazněna odbornost hlavního citovaného experta v článku?** (0 = odbornost zmíněna okrajově, 2 = neutrální zmínka o odbornosti, 4 = silný důraz na odbornost)
+
+**24. Do jaké míry jsou v článku zmíněna následující místa konzumace alkoholu:**
+
+- **24a.** V domácnosti (0 = zmíněno okrajově, 4 = hlavní místo konzumace)
+- **24b.** Ve veřejném prostoru jako bary a restaurace (0 = zmíněno okrajově, 4 = hlavní místo konzumace)
+- **24c.** Na veřejném prostranství jako ulice a parky (0 = zmíněno okrajově, 4 = hlavní místo konzumace)
+- **24d.** Jinde (0 = zmíněno okrajově, 4 = hlavní místo konzumace)
+
+**25. Do jaké míry je v článku místo konzumace alkoholu spojováno s jeho škodlivostí?** (0 = slabá spojitost, 4 = přímá a silná spojitost)
+
+**26. Do jaké míry je v článku čas konzumace alkoholu spojován s jeho škodlivostí?** (0 = slabá spojitost, 4 = přímá a silná spojitost)
+
+**27. Do jaké míry je v článku problém s alkoholem prezentován jako:**
+
+- **27a.** Snadno řešitelný konkrétními opatřeními (0 = zmíněno okrajově, 4 = je tak prezentován výhradně)
+- **27b.** Obtížně řešitelný (0 = zmíněno okrajově, 4 = je tak prezentován výhradně)
+- **27c.** Nevyhnutelný/přirozený jev (0 = zmíněno okrajově, 4 = je tak prezentován výhradně)
+
+**28. Do jaké míry článek používá následující tón vůči čtenáři:**
+
+- **28a.** Apeluje na čtenáře k akci nebo změně postoje (0 = slabý apel, 4 = silný apel)
+- **28b.** Neutrálně popisuje situaci (0 = mírně neutrální, 4 = zcela neutrální)
+
+**29. Do jaké míry je v článku zdůrazněno zdanění alkoholu jako možné řešení problému?** (0 = zmíněno okrajově, 4 = je prezentováno jako hlavní řešení)
+
+**30. Do jaké míry jsou v článku zdůrazněny následující pozitivní stránky konzumace alkoholu:**
+
+- **30a.** Sociální aspekty jako společenský život (0 = zmíněny okrajově, 4 = hlavní pozitivní aspekt)
+- **30b.** Ekonomické aspekty jako pracovní místa, export (0 = zmíněny okrajově, 4 = hlavní pozitivní aspekt)
+- **30c.** Kulturní aspekty jako tradice, gastronomie (0 = zmíněny okrajově, 4 = hlavní pozitivní aspekt)
+
+**31. Do jaké míry je v článku zdůrazněna regulace alkoholu?** (0 = zmíněna okrajově, 4 = je hlavním tématem článku)
+
+**32. Do jaké míry článek zdůrazňuje následující řešení problémů spojených s alkoholem:**
+
+- **32a.** Individuální odpovědnost konzumentů (0 = zmíněna okrajově, 4 = hlavní navrhované řešení)
+- **32b.** Systémové změny jako regulace, zdanění (0 = zmíněny okrajově, 4 = hlavní navrhované řešení)
+- **32c.** Edukace a prevence (0 = zmíněny okrajově, 4 = hlavní navrhované řešení)
+- **32d.** Jiná řešení (0 = zmíněna okrajově, 4 = hlavní navrhované řešení)
+
+## Formát výstupu:
+
+Poté poskytni výstup v této JSON struktuře:
+
+```json
+{
+  "temata": [
+    {
+      "poradi_tematu": number,
+      "vyskyt_tematu": boolean,
+      "orientace": number nebo null (pokud vyskyt_tematu je FALSE),
+      "citace": ["string"],
+      "vysvetleni": "string",
+      "jistota": "string"
+    }
+  ],
+  "tema": ["string"]
+}
+```
+
+Pro témata, která v textu nejsou přítomná, uveď v JSON výstupu:
+
+- vyskyt_tematu: false
+- orientace: null
+- citace: prázdné pole []
+- vysvětlení: stručné zdůvodnění, proč toto téma v textu není přítomno (maximálně dvě věty)
+- jistota: úroveň jistoty o nepřítomnosti tématu
+
+Podle těchto principů analyzuj následující článek:
+
+'zde bude text článku'
+"""

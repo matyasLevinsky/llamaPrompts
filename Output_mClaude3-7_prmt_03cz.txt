@@ -1,0 +1,461 @@
+{
+  "1": [
+    {
+      "vyskyt_tematu": true,
+      "orientace": 1,
+      "citace": ["Úklidoví pracovníci, kteří pracují pouze na denní směny, lépe spí, mají lepší stravovací návyky, konzumují méně cigaret a alkoholu a vykazují menší účinky na jejich duševní zdraví než jejich kolegové, kteří pracují na jiné směny."],
+      "vysvetleni": "Článek zmiňuje konzumaci alkoholu pouze velmi okrajově v jedné větě, jako jeden z dopadů směnného pracovního režimu.",
+      "jistota": "vysoká"
+    }
+  ],
+  "2": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "V článku není žádná zmínka o víně jako alkoholickém nápoji.",
+      "jistota": "vysoká"
+    }
+  ],
+  "3": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "V článku není žádná zmínka o pivu jako alkoholickém nápoji.",
+      "jistota": "vysoká"
+    }
+  ],
+  "4": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "V článku není žádná zmínka o tvrdém alkoholu.",
+      "jistota": "vysoká"
+    }
+  ],
+  "5": [
+    {
+      "vyskyt_tematu": true,
+      "orientace": 1,
+      "citace": ["Úklidoví pracovníci, kteří pracují pouze na denní směny, lépe spí, mají lepší stravovací návyky, konzumují méně cigaret a alkoholu a vykazují menší účinky na jejich duševní zdraví než jejich kolegové, kteří pracují na jiné směny."],
+      "vysvetleni": "Článek nepřímo naznačuje, že zvýšená konzumace alkoholu je jedním z negativních dopadů práce ve večerních a nočních směnách, ale je to zmíněno pouze okrajově.",
+      "jistota": "střední"
+    }
+  ],
+  "6": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nezmiňuje sociální škody způsobené alkoholem.",
+      "jistota": "vysoká"
+    }
+  ],
+  "7": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nezmiňuje kriminální činnost spojenou s alkoholem.",
+      "jistota": "vysoká"
+    }
+  ],
+  "8": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nezmiňuje nehody způsobené alkoholem.",
+      "jistota": "vysoká"
+    }
+  ],
+  "9": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nezmiňuje domácí násilí spojené s alkoholem.",
+      "jistota": "vysoká"
+    }
+  ],
+  "10": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nezmiňuje dopady konzumace alkoholu na děti v domácnostech.",
+      "jistota": "vysoká"
+    }
+  ],
+  "11": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nezmiňuje ekonomické škody způsobené alkoholem.",
+      "jistota": "vysoká"
+    }
+  ],
+  "12": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nezmiňuje sníženou produktivitu v důsledku konzumace alkoholu.",
+      "jistota": "vysoká"
+    }
+  ],
+  "13": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nezmiňuje zátěž konzumace alkoholu na sociální systém.",
+      "jistota": "vysoká"
+    }
+  ],
+  "14": [
+    {
+      "vyskyt_tematu": true,
+      "orientace": 1,
+      "citace": ["Úklidoví pracovníci, kteří pracují pouze na denní směny, lépe spí, mají lepší stravovací návyky, konzumují méně cigaret a alkoholu a vykazují menší účinky na jejich duševní zdraví než jejich kolegové, kteří pracují na jiné směny."],
+      "vysvetleni": "Článek nepřímo naznačuje, že konzumace alkoholu může mít negativní dopad na zdraví, když zmiňuje, že pracovníci na denní směny konzumují méně alkoholu a mají lepší duševní zdraví.",
+      "jistota": "střední"
+    }
+  ],
+  "15": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek konkrétně nezmiňuje krátkodobé zdravotní následky konzumace alkoholu.",
+      "jistota": "vysoká"
+    }
+  ],
+  "16": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek konkrétně nezmiňuje dlouhodobé zdravotní následky konzumace alkoholu.",
+      "jistota": "vysoká"
+    }
+  ],
+  "17": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nezmiňuje závislost na alkoholu.",
+      "jistota": "vysoká"
+    }
+  ],
+  "18a": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nezmiňuje širokou veřejnost jako oběť konzumace alkoholu.",
+      "jistota": "vysoká"
+    }
+  ],
+  "18b": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nezmiňuje konkrétní osoby jako oběti konzumace alkoholu.",
+      "jistota": "vysoká"
+    }
+  ],
+  "19": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nerozlišuje mezi konzumenty a ostatními lidmi jako oběťmi konzumace alkoholu.",
+      "jistota": "vysoká"
+    }
+  ],
+  "20": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nezmiňuje řešení problémů způsobených konzumací alkoholu samotnými konzumenty.",
+      "jistota": "vysoká"
+    }
+  ],
+  "21a": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nezmiňuje širokou veřejnost jako viníka škod způsobených alkoholem.",
+      "jistota": "vysoká"
+    }
+  ],
+  "21b": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nezmiňuje konkrétní osoby nebo skupiny jako viníky škod způsobených alkoholem.",
+      "jistota": "vysoká"
+    }
+  ],
+  "22a": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "V článku nedostávají prostor k vyjádření odborníci z oblasti alkoholového průmyslu.",
+      "jistota": "vysoká"
+    }
+  ],
+  "22b": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "V článku nedostávají prostor k vyjádření policisté nebo úředníci státní správy.",
+      "jistota": "vysoká"
+    }
+  ],
+  "22c": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "V článku nedostávají prostor k vyjádření politici.",
+      "jistota": "vysoká"
+    }
+  ],
+  "22d": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "V článku nedostávají prostor k vyjádření lékaři nebo vědci přímo k tématu alkoholu.",
+      "jistota": "vysoká"
+    }
+  ],
+  "22e": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "V článku nedostávají prostor k vyjádření oběti konzumace alkoholu.",
+      "jistota": "vysoká"
+    }
+  ],
+  "22f": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "V článku nedostávají prostor k vyjádření ti, kteří jsou označeni jako viníci.",
+      "jistota": "vysoká"
+    }
+  ],
+  "22g": [
+    {
+      "vyskyt_tematu": true,
+      "orientace": 3,
+      "citace": ["„Průzkum ukázal, že většina uklízečů pracujících v nočních směnách uvádí, že nemá dostatek spánku, stejně jako polovina uklízečů pracujících v ranních a večerních směnách. To má vliv na jejich zdraví a kondici, mohou být více unavení a nemocní. Nemají také dostatek času a energie na svoje blízké," uvádí Milada Skutilová, generální ředitelka české pobočky Kärcher"],
+      "vysvetleni": "V článku dostává významný prostor k vyjádření generální ředitelka firmy Kärcher, ale její vyjádření se netýkají přímo konzumace alkoholu, nýbrž obecně dopadů směnného provozu.",
+      "jistota": "vysoká"
+    }
+  ],
+  "23": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "V článku není zdůrazněna odbornost žádného experta vzhledem k tématu alkoholu.",
+      "jistota": "vysoká"
+    }
+  ],
+  "24a": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nezmiňuje domácnost jako místo konzumace alkoholu.",
+      "jistota": "vysoká"
+    }
+  ],
+  "24b": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nezmiňuje veřejný prostor jako bary a restaurace jako místa konzumace alkoholu.",
+      "jistota": "vysoká"
+    }
+  ],
+  "24c": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nezmiňuje veřejné prostranství jako ulice a parky jako místa konzumace alkoholu.",
+      "jistota": "vysoká"
+    }
+  ],
+  "24d": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nezmiňuje žádná jiná místa konzumace alkoholu.",
+      "jistota": "vysoká"
+    }
+  ],
+  "25": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nespojuje místo konzumace alkoholu s jeho škodlivostí.",
+      "jistota": "vysoká"
+    }
+  ],
+  "26": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nespojuje čas konzumace alkoholu s jeho škodlivostí.",
+      "jistota": "vysoká"
+    }
+  ],
+  "27a": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek neprezentuje problém s alkoholem jako snadno řešitelný konkrétními opatřeními.",
+      "jistota": "vysoká"
+    }
+  ],
+  "27b": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek neprezentuje problém s alkoholem jako obtížně řešitelný.",
+      "jistota": "vysoká"
+    }
+  ],
+  "27c": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek neprezentuje problém s alkoholem jako nevyhnutelný/přirozený jev.",
+      "jistota": "vysoká"
+    }
+  ],
+  "28a": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek neapeluje na čtenáře k akci nebo změně postoje v souvislosti s alkoholem.",
+      "jistota": "vysoká"
+    }
+  ],
+  "28b": [
+    {
+      "vyskyt_tematu": true,
+      "orientace": 4,
+      "citace": ["Úklidoví pracovníci, kteří pracují pouze na denní směny, lépe spí, mají lepší stravovací návyky, konzumují méně cigaret a alkoholu a vykazují menší účinky na jejich duševní zdraví než jejich kolegové, kteří pracují na jiné směny."],
+      "vysvetleni": "Článek pouze neutrálně konstatuje výsledky průzkumu, včetně zmínky o konzumaci alkoholu, bez hodnotícího stanoviska.",
+      "jistota": "vysoká"
+    }
+  ],
+  "29": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nezmiňuje zdanění alkoholu jako možné řešení problému.",
+      "jistota": "vysoká"
+    }
+  ],
+  "30a": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nezmiňuje pozitivní sociální aspekty konzumace alkoholu.",
+      "jistota": "vysoká"
+    }
+  ],
+  "30b": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nezmiňuje pozitivní ekonomické aspekty konzumace alkoholu.",
+      "jistota": "vysoká"
+    }
+  ],
+  "30c": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nezmiňuje pozitivní kulturní aspekty konzumace alkoholu.",
+      "jistota": "vysoká"
+    }
+  ],
+  "31": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nezmiňuje regulaci alkoholu.",
+      "jistota": "vysoká"
+    }
+  ],
+  "32a": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nezmiňuje individuální odpovědnost konzumentů alkoholu jako řešení problémů.",
+      "jistota": "vysoká"
+    }
+  ],
+  "32b": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nezmiňuje systémové změny jako regulace či zdanění alkoholu jako řešení problémů.",
+      "jistota": "vysoká"
+    }
+  ],
+  "32c": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nezmiňuje edukaci a prevenci jako řešení problémů spojených s alkoholem.",
+      "jistota": "vysoká"
+    }
+  ],
+  "32d": [
+    {
+      "vyskyt_tematu": false,
+      "orientace": null,
+      "citace": [],
+      "vysvetleni": "Článek nezmiňuje jiná řešení problémů spojených s alkoholem.",
+      "jistota": "vysoká"
+    }
+  ]
+}

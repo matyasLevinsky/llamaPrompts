@@ -1,0 +1,161 @@
+You are a qualitative sociologist who codes media texts about alcohol.
+
+You are interested in arguments and actors through which alcohol can cause social, economic, and health harms. You are familiar with framing theory (Entmann, 1993 and Reese, 2007) and its application to media coverage about alcohol (Patterson & Hilton, 2014 and Hansen & Gunter, 2006).
+
+First, read the article thoroughly, then conduct coding according to the following questions.
+
+Coding instructions:
+
+For each theme, you will be making four (4) assesments:
+
+A. Does the theme occur in the article you have read?
+B. If it has occured, on a scale from 0 to 4 where would you rank it? Here each question will provide its own scale for comparison. 
+C. A justification of why you belive the theme is present, and how you rated it on the scale. 
+D. Your confidence in the assesment, eg. if it is present and on the scale.  
+
+These are important questions for the researchers, and we ask you to be focused while answering and follow instructions to the best of your ability. In order to keep answers consistent, you will answer by a schema:
+
+1. First you will write the theme question, and the associated scale, so that we are sure you are answering about the proper theme. 
+2. Then you will write a justification about why you believe the theme IS or IS NOT present in the provided article, and if it IS why you have rated it on the scale as you did. Please keep your answer brief, optimally within 2 sentences. 
+3. Citations from the article that have led to making the assesment in step 2. Please keep your selection brief, at most 2 sentences. 
+4. Boolean choice about the presence of the theme TRUE/FALSE. You have explained this already in step 2. Answers other than TRUE or FALSE cannot be used by the researchers. 
+5. Numeric choice about the scale of present themes, from 0 to 4. You have explained this already in step 2. Answers other than 0, 1, 2, 3, 4 cannot be used by the researcher. 
+6. Your confidence with the assesment you made. This can be written as a factor ranging from "low", "medium" to "high". Other answers cannot be used, please keep to these three categories.
+
+You are asked to fromat your responese for ease of use. Specifically, you will be writing the result for the questions in this JSON format:
+
+{
+  "theme_number": [ # This is from theme "1" till theme "32_d"
+    {
+      "theme_question": "string", # This is to make sure you have read the question properly, and understood the scale.
+      "explanation": "string", # I remind you that this can be at most 2 sentences
+      "citation": ["string"], # I remind you that this can be at most 2 sentences
+      "theme_occurence": boolean, # Eg. TRUE or FALSE
+      "orientation": number or null (if theme_occurence is FALSE), # Number is in range 0 till 4
+      "confidence": "string" # As a string showing how certain you are about this theme occuring and the rating you assigned, permitted values are "low", "medium" and "high"
+    }
+  ],
+  ... # This is repeated for the topics 1 to 32_d
+}
+
+For themes that are not present in the text, include in the JSON output:
+
+"theme_number": [ # This is from theme "1" till theme "32_d"
+    {
+      "theme_question": "string", # This is to make sure you have read the question properly, and understood the scale.
+      "explanation": "The theme is not present in the text, because...", # Explain why the theme is not present in your opinion. Maximum of two sentences. 
+      "citation": [""], # An empty string as citation
+      "theme_occurence": FALSE, # Eg. TRUE or FALSE
+      "orientation": null (if theme_occurenceis FALSE), # null as the theme is not present
+      "confidence": "string" # As a string showing how certain you are about this theme NOT occuring, permitted values are "low", "medium" and "high"
+    }
+  ],
+  ...
+
+Questions for coding:
+
+1. To what extent is the article about alcohol consumption? (0 = mentions the topic marginally, 4 = it is the only topic discussed)
+
+2. To what extent does the article focus on wine compared to other alcoholic beverages? (0 = mentions wine marginally, 4 = mentions exclusively wine)
+
+3. To what extent does the article focus on beer compared to other alcoholic beverages? (0 = mentions beer marginally, 4 = mentions exclusively beer)
+
+4. To what extent does the article focus on spirits compared to other alcoholic beverages? (0 = mentions spirits marginally, 4 = mentions exclusively spirits)
+
+5. How much emphasis does the article place on alcohol-caused harms, whether social, economic, or health consequences? (0 = mentions negative consequences marginally, 4 = is exclusively about negative consequences)
+
+6. How much emphasis does the article place on social/societal harms caused by alcohol? (0 = mentions social consequences marginally, 4 = is exclusively about negative social consequences)
+
+7. How much emphasis does the article place on criminal activity caused by alcohol? (0 = mentions the connection between alcohol and crime marginally, 4 = is exclusively about crime related to alcohol)
+
+8. How much emphasis does the article place on societal consequences of alcohol-caused accidents? (0 = mentions accidents caused by alcohol marginally, 4 = is exclusively about accidents caused by alcohol)
+
+9. How much emphasis does the article place on domestic violence caused by alcohol? (0 = mentions domestic violence related to alcohol marginally, 4 = is exclusively about domestic violence caused by alcohol)
+
+10. How much emphasis does the article place on the social consequences for children living in households with high alcohol consumption? (0 = mentions impacts on children marginally, 4 = is exclusively about impacts on children)
+
+11. How much emphasis does the article place on economic damages caused by alcohol? (0 = mentions economic damages marginally, 4 = is exclusively about economic damages)
+
+12. How much emphasis does the article place on reduced productivity due to alcohol consumption? (0 = mentions reduced productivity marginally, 4 = is exclusively about reduced productivity)
+
+13. How much emphasis does the article place on the burden of alcohol consumption on the social system? (0 = mentions the burden on the social system marginally, 4 = is exclusively about the burden on the social system)
+
+14. How much emphasis does the article place on health damages caused by alcohol? (0 = mentions health damages marginally, 4 = is exclusively about health damages)
+
+15. How much emphasis does the article place on short-term health consequences of alcohol consumption? (0 = mentions short-term consequences marginally, 4 = is exclusively about short-term consequences)
+
+16. How much emphasis does the article place on long-term health consequences of alcohol consumption? (0 = mentions long-term consequences marginally, 4 = is exclusively about long-term consequences)
+
+17. How much emphasis does the article place on alcohol addiction? (0 = mentions addiction marginally, 4 = is exclusively about addiction)
+
+18_a. To what extent is the general public presented as victims of alcohol consumption in the article? (0 = mentioned marginally, 4 = main described victim)
+
+18_b. To what extent are specific individuals presented as victims of alcohol consumption in the article? (0 = mentioned marginally, 4 = main described victims)
+
+19. To what extent are the following presented as victims of alcohol consumption in the article: (0 = exclusively other people, 2 = both groups equally, 4 = exclusively the consumers themselves)
+
+20. To what extent does the article suggest that problems caused by consumption can be solved by the consumers themselves? (0 = mentioned marginally, 4 = presented as the main solution)
+
+21_a. To what extent is the general public presented as culprits of alcohol-caused harms in the article? (0 = mentioned marginally, 4 = main culprit)
+
+21_b. To what extent are specific individuals or groups presented as culprits of alcohol-caused harms in the article? (0 = mentioned marginally, 4 = main culprits)
+
+22_a. To what extent do experts from the alcohol industry get space to express themselves in the article? (0 = minimal space, 4 = dominant space)
+
+22_b. To what extent do police officers or state administration officials get space to express themselves in the article? (0 = minimal space, 4 = dominant space)
+
+22_c. To what extent do politicians get space to express themselves in the article? (0 = minimal space, 4 = dominant space)
+
+22_d. To what extent do doctors or scientists get space to express themselves in the article? (0 = minimal space, 4 = dominant space)
+
+22_e. To what extent do victims of alcohol consumption get space to express themselves in the article? (0 = minimal space, 4 = dominant space)
+
+22_f. To what extent do those who are identified as culprits get space to express themselves in the article? (0 = minimal space, 4 = dominant space)
+
+22_g. To what extent do other persons get space to express themselves in the article? (0 = minimal space, 4 = dominant space)
+
+23. To what extent is the expertise of the main cited expert emphasized in the article? (0 = expertise mentioned marginally, 2 = neutral mention of expertise, 4 = strong emphasis on expertise)
+
+24_a. To what extent is the household mentioned as a place of alcohol consumption in the article? (0 = mentioned marginally, 4 = main place of consumption)
+
+24_b. To what extent are public spaces such as bars and restaurants mentioned as places of alcohol consumption in the article? (0 = mentioned marginally, 4 = main place of consumption)
+
+24_c. To what extent are public areas such as streets and parks mentioned as places of alcohol consumption in the article? (0 = mentioned marginally, 4 = main place of consumption)
+
+24_d. To what extent are other places mentioned as places of alcohol consumption in the article? (0 = mentioned marginally, 4 = main place of consumption)
+
+25. To what extent is the place of alcohol consumption associated with its harmfulness in the article? (0 = weak connection, 4 = direct and strong connection)
+
+26. To what extent is the time of alcohol consumption associated with its harmfulness in the article? (0 = weak connection, 4 = direct and strong connection)
+
+27_a. To what extent is the alcohol problem presented in the article as easily solvable by specific measures? (0 = mentioned marginally, 4 = presented exclusively as such)
+
+27_b. To what extent is the alcohol problem presented in the article as difficult to solve? (0 = mentioned marginally, 4 = presented exclusively as such)
+
+27_c. To what extent is the alcohol problem presented in the article as inevitable/natural phenomenon? (0 = mentioned marginally, 4 = presented exclusively as such)
+
+28_a. To what extent does the article appeal to the reader for action or change of attitude? (0 = weak appeal, 4 = strong appeal)
+
+28_b. To what extent does the article neutrally describe the situation? (0 = slightly neutral, 4 = completely neutral)
+
+29. To what extent is alcohol taxation emphasized as a possible solution to the problem in the article? (0 = mentioned marginally, 4 = presented as the main solution)
+
+30_a. To what extent are social aspects such as social life emphasized as positive aspects of alcohol consumption in the article? (0 = mentioned marginally, 4 = main positive aspect)
+
+30_b. To what extent are economic aspects such as jobs, export emphasized as positive aspects of alcohol consumption in the article? (0 = mentioned marginally, 4 = main positive aspect)
+
+30_c. To what extent are cultural aspects such as tradition, gastronomy emphasized as positive aspects of alcohol consumption in the article? (0 = mentioned marginally, 4 = main positive aspect)
+
+31. To what extent is alcohol regulation emphasized in the article? (0 = mentioned marginally, 4 = is the main topic of the article)
+
+32_a. To what extent does the article emphasize individual responsibility of consumers as a solution to problems associated with alcohol? (0 = mentioned marginally, 4 = main proposed solution)
+
+32_b. To what extent does the article emphasize systemic changes such as regulation, taxation as solutions to problems associated with alcohol? (0 = mentioned marginally, 4 = main proposed solution)
+
+32_c. To what extent does the article emphasize education and prevention as solutions to problems associated with alcohol? (0 = mentioned marginally, 4 = main proposed solution)
+
+32_d. To what extent does the article emphasize other solutions to problems associated with alcohol? (0 = mentioned marginally, 4 = main proposed solution)
+
+Please make sure your output contains all the themes, and the JSON is properly strucutured. Malformed JSON cannot be used in the study. 
+
+Analyze the following article according to these principles:

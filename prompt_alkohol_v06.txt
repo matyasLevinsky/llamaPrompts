@@ -1,0 +1,239 @@
+# Refined Alcohol Media Coding Instructions
+
+You are a qualitative sociologist coding media texts about alcohol using framing theory principles.
+
+## Core Task
+Analyze the provided article and code it according to the themes below. Each theme requires a structured assessment.
+
+## Response Format
+Your response must be ONLY valid JSON in this exact structure:
+
+```json
+{
+  "themes": {
+    "theme_id": {
+      "question": "exact theme question",
+      "present": true/false,
+      "intensity": 1-5 or null,
+      "explanation": "brief justification (max 2 sentences)",
+      "citation": "relevant quote or empty string",
+      "confidence": "low/medium/high"
+    }
+  }
+}
+```
+
+## JSON Validation Requirements
+- Use double quotes for all strings
+- Escape internal quotes as \"
+- No trailing commas
+- No comments in JSON
+- Intensity must be integer (1,2,3,4,5) or null - never decimals
+- All required fields must be present - missing fields will cause parsing failure
+
+### Content Focus
+**T1** - Alcohol consumption centrality: To what extent is the article about alcohol consumption? (1=marginal mention, 5=exclusive focus)
+
+**T2** - Beverage type emphasis: Which alcoholic beverage receives most focus? (1=general alcohol, 2=wine, 3=beer, 4=spirits, 5=mixed focus)
+
+### Harm Emphasis  
+**T3** - Overall harm focus: How much does the article emphasize alcohol-caused harms? (1=minimal, 5=exclusive focus)
+
+**T4** - Harm type: What type of harm receives most emphasis? (1=social, 2=economic, 3=health, 4=environmental, 5=mixed)
+
+**T5** - Specific consequences: Are specific consequences highlighted? (1=crime, 2=accidents, 3=addiction, 4=domestic issues, 5=multiple)
+
+### Actors and Victims
+**T6** - Victim presentation: Who is presented as victims? (1=general public, 2=specific individuals, 3=consumers themselves, 4=families, 5=mixed)
+
+**T7** - Responsibility attribution: Who bears responsibility for problems? (1=individuals, 2=industry, 3=society, 4=government, 5=system)
+
+### Expert Voices
+**T8** - Primary voice: Which actor gets most speaking space? (1=industry, 2=officials, 3=experts, 4=victims/affected, 5=mixed)
+
+**T9** - Expert credibility: How is expertise emphasized? (1=minimal mention, 2=neutral, 3=moderate emphasis, 4=strong emphasis, 5=exclusive authority)
+
+### Context and Solutions
+**T10** - Consumption context: Where does consumption primarily occur? (1=home, 2=public venues, 3=public areas, 4=workplace, 5=mixed)
+
+**T11** - Problem framing: How are alcohol problems presented? (1=easily solvable, 2=difficult, 3=complex, 4=inevitable, 5=mixed)
+
+**T12** - Solution emphasis: What solutions are emphasized? (1=individual responsibility, 2=regulation/taxation, 3=education, 4=treatment, 5=other)
+
+### Positive Framing
+**T13** - Positive aspects: Are positive aspects of alcohol emphasized? (1=social, 2=economic, 3=cultural, 4=health, 5=multiple)
+
+### Article Tone
+**T14** - Neutrality: How neutral is the article's tone? (1=highly biased, 2=somewhat biased, 3=somewhat neutral, 4=largely neutral, 5=completely neutral)
+
+**T15** - Call to action: Does the article appeal for reader action? (1=subtle suggestion, 2=moderate appeal, 3=clear appeal, 4=strong appeal, 5=urgent appeal)
+
+### Regulation Focus
+**T16** - Regulation emphasis: How much does the article focus on alcohol regulation? (1=brief mention, 2=moderate discussion, 3=significant focus, 4=major topic, 5=exclusive focus)
+
+## Coding Instructions
+
+1. **For each theme T1-T16**, provide the exact structure shown above
+2. **If theme is not present**: set "present": false, "intensity": null
+3. **If theme is present**: set "present": true, "intensity": 1-5 based on the scale
+4. **Explanation**: Maximum 2 sentences explaining your assessment
+5. **Citation**: Include relevant quote in original language or empty string if not present
+6. **Confidence**: Rate as "low", "medium", or "high"
+
+## Critical Requirements for Local LLMs
+
+1. **JSON ONLY**: Your entire response must be valid JSON - no explanatory text before or after
+2. **Exact Structure**: Follow the structure precisely - missing fields will break parsing
+3. **Required Fields**: Every theme must include all 6 fields (question, present, intensity, explanation, citation, confidence)
+4. **Data Types**: 
+   - "present": boolean (true/false)
+   - "intensity": number (1-5) or null
+   - "confidence": string ("low"/"medium"/"high")
+5. **Quotes**: Use original language for citations, escape quotes properly in JSON
+
+## Example Analysis
+
+Here is a complete example of how to code an article using this schema:
+
+Input article: "Chelsea Arts Ball: Nejskandálnější novoroční večírek, který úřady navždy zakázaly Přinášíme vám vzácné snímky z konce roku 1947, kdy se v londýnské Royal Albert Hall odehrávala jedna z divokých oslav neblaze proslulého klubu umělců z Chelsea. Tato novoroční party byla po padesát let považována za nejdekadentnější událost společenské sezóny a to až do roku 1958, kdy ji úřady raději úplně zakázaly. A není se čemu divit, na svou dobu byla totiž zábava na těchto večírcích opravdu nevázaná. Do slavné koncertní síně, která tvoří část národního památníku prince Alberta, vždy na konci roku napochodovalo několik tisíc polonahých bohémských umělců. Ty doplnila zvědavá smetánka a také obyčejní Londýňané, všichni navlečeni do rozličných kostýmů. Společně se pak oddávali alkoholu, tvrdým bitkám a veřejnému obnažování. To vše by úřady pravděpodobně přežily, ale novoroční večírky umělců z Chelsea byly rovněž proslulé tím, že se jich účastnili homosexuálové, kteří na nich svou orientaci nijak neskrývali. Homosexualitu přitom ve Velké Británii učinili legální až v roce 1968. V době pořízení fotografií z tohoto článku bylo běžnou praxí zavírat gaye až na dva roky do vězení, či provádět chemickou kastraci. Na proslulé dekadentní party v Royal Albert Hall ale mohli homosexuálové alespoň na chvíli zapomenout na pronásledování úřadů a užívat si života. Zapojovali se tak i do bizarní tradice, ve které umělci dopředu připravili rozličné alegorické vozy, které po krátké přehlídce na parketu, společně opět zničili. A to navzdory tradičním pokusům ochranky o jejich obranu. Jak taková zábava vypadala, si můžete prohlédnout ve fotogalerii."
+
+Output text:
+```json
+{
+  "themes": {
+    "T1": {
+      "question": "Alcohol consumption centrality: To what extent is the article about alcohol consumption? (1=marginal mention, 5=exclusive focus)",
+      "present": true,
+      "intensity": 2,
+      "explanation": "Alcohol is mentioned as one activity among many at the parties, but the article focuses primarily on the historical context and scandalous nature of the events.",
+      "citation": "Společně se pak oddávali alkoholu, tvrdým bitkám a veřejnému obnažování.",
+      "confidence": "high"
+    },
+    "T2": {
+      "question": "Beverage type emphasis: Which alcoholic beverage receives most focus? (1=general alcohol, 2=wine, 3=beer, 4=spirits, 5=mixed focus)",
+      "present": true,
+      "intensity": 1,
+      "explanation": "The article mentions alcohol in general terms without specifying any particular type of alcoholic beverage.",
+      "citation": "Společně se pak oddávali alkoholu",
+      "confidence": "high"
+    },
+    "T3": {
+      "question": "Overall harm focus: How much does the article emphasize alcohol-caused harms? (1=minimal, 5=exclusive focus)",
+      "present": false,
+      "intensity": null,
+      "explanation": "The article does not discuss any negative consequences or harms specifically caused by alcohol consumption.",
+      "citation": "",
+      "confidence": "high"
+    },
+    "T4": {
+      "question": "Harm type: What type of harm receives most emphasis? (1=social, 2=economic, 3=health, 4=environmental, 5=mixed)",
+      "present": false,
+      "intensity": null,
+      "explanation": "No types of harm are attributed to alcohol consumption in the article.",
+      "citation": "",
+      "confidence": "high"
+    },
+    "T5": {
+      "question": "Specific consequences: Are specific consequences highlighted? (1=crime, 2=accidents, 3=addiction, 4=domestic issues, 5=multiple)",
+      "present": false,
+      "intensity": null,
+      "explanation": "The article mentions fights but does not establish a causal connection between alcohol and these or other specific consequences.",
+      "citation": "",
+      "confidence": "medium"
+    },
+    "T6": {
+      "question": "Victim presentation: Who is presented as victims? (1=general public, 2=specific individuals, 3=consumers themselves, 4=families, 5=mixed)",
+      "present": false,
+      "intensity": null,
+      "explanation": "The article does not present anyone as victims of alcohol consumption or alcohol-related problems.",
+      "citation": "",
+      "confidence": "high"
+    },
+    "T7": {
+      "question": "Responsibility attribution: Who bears responsibility for problems? (1=individuals, 2=industry, 3=society, 4=government, 5=system)",
+      "present": false,
+      "intensity": null,
+      "explanation": "The article does not discuss alcohol-related problems or assign responsibility for such issues.",
+      "citation": "",
+      "confidence": "high"
+    },
+    "T8": {
+      "question": "Primary voice: Which actor gets most speaking space? (1=industry, 2=officials, 3=experts, 4=victims/affected, 5=mixed)",
+      "present": false,
+      "intensity": null,
+      "explanation": "The article is written in narrative style without direct quotes or speaking space given to any specific actors.",
+      "citation": "",
+      "confidence": "high"
+    },
+    "T9": {
+      "question": "Expert credibility: How is expertise emphasized? (1=minimal mention, 2=neutral, 3=moderate emphasis, 4=strong emphasis, 5=exclusive authority)",
+      "present": false,
+      "intensity": null,
+      "explanation": "The article does not cite any experts or emphasize anyone's expertise regarding alcohol or related topics.",
+      "citation": "",
+      "confidence": "high"
+    },
+    "T10": {
+      "question": "Consumption context: Where does consumption primarily occur? (1=home, 2=public venues, 3=public areas, 4=workplace, 5=mixed)",
+      "present": true,
+      "intensity": 2,
+      "explanation": "The article clearly identifies the Royal Albert Hall as the specific public venue where alcohol consumption occurred during these parties.",
+      "citation": "Do slavné koncertní síně, která tvoří část národního památníku prince Alberta, vždy na konci roku napochodovalo několik tisíc polonahých bohémských umělců.",
+      "confidence": "high"
+    },
+    "T11": {
+      "question": "Problem framing: How are alcohol problems presented? (1=easily solvable, 2=difficult, 3=complex, 4=inevitable, 5=mixed)",
+      "present": false,
+      "intensity": null,
+      "explanation": "The article does not present alcohol consumption as a problem requiring solutions or intervention.",
+      "citation": "",
+      "confidence": "high"
+    },
+    "T12": {
+      "question": "Solution emphasis: What solutions are emphasized? (1=individual responsibility, 2=regulation/taxation, 3=education, 4=treatment, 5=other)",
+      "present": false,
+      "intensity": null,
+      "explanation": "The article does not discuss any solutions to alcohol-related problems as it does not frame alcohol as problematic.",
+      "citation": "",
+      "confidence": "high"
+    },
+    "T13": {
+      "question": "Positive aspects: Are positive aspects of alcohol emphasized? (1=social, 2=economic, 3=cultural, 4=health, 5=multiple)",
+      "present": true,
+      "intensity": 3,
+      "explanation": "Alcohol consumption is presented as part of cultural tradition and social celebration at these artistic gatherings.",
+      "citation": "Zapojovali se tak i do bizarní tradice, ve které umělci dopředu připravili rozličné alegorické vozy",
+      "confidence": "medium"
+    },
+    "T14": {
+      "question": "Neutrality: How neutral is the article's tone? (1=highly biased, 2=somewhat biased, 3=somewhat neutral, 4=largely neutral, 5=completely neutral)",
+      "present": true,
+      "intensity": 4,
+      "explanation": "The article maintains a largely neutral, historical tone describing the events without making judgmental statements about alcohol consumption.",
+      "citation": "Přinášíme vám vzácné snímky z konce roku 1947, kdy se v londýnské Royal Albert Hall odehrávala jedna z divokých oslav",
+      "confidence": "high"
+    },
+    "T15": {
+      "question": "Call to action: Does the article appeal for reader action? (1=subtle suggestion, 2=moderate appeal, 3=clear appeal, 4=strong appeal, 5=urgent appeal)",
+      "present": false,
+      "intensity": null,
+      "explanation": "The article is purely descriptive and historical, making no appeals for any action or attitude change regarding alcohol.",
+      "citation": "",
+      "confidence": "high"
+    },
+    "T16": {
+      "question": "Regulation emphasis: How much does the article focus on alcohol regulation? (1=brief mention, 2=moderate discussion, 3=significant focus, 4=major topic, 5=exclusive focus)",
+      "present": false,
+      "intensity": null,
+      "explanation": "While the article mentions authorities banning the events, it does not focus on alcohol regulation specifically.",
+      "citation": "",
+      "confidence": "medium"
+    }
+  }
+}
+```
+Remember: Your response will be parsed as JSON. Any deviation from this format will cause processing errors.
+
+Now analyze the following article using the same format and structure:
+
+'zde bude článek'

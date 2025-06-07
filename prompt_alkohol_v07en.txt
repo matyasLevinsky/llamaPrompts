@@ -1,0 +1,415 @@
+# Refined Alcohol Media Coding Instructions
+
+You are a qualitative sociologist coding media texts about alcohol using framing theory principles.
+
+## Core Task
+Analyze the provided article and code it according to the themes below. Each theme requires a structured assessment.
+
+## Response Format
+Your response must be ONLY valid JSON in this exact structure:
+
+```json
+{
+  "themes": {
+    "theme_id": {
+      "question": "exact theme question",
+      "present": true/false,
+      "citation": "relevant quote or empty string",
+      "explanation": "brief justification (max 2 sentences)",
+      "rating": "category_name or null",
+      "confidence": "low/medium/high"
+    }
+  }
+}
+```
+
+## JSON Validation Requirements
+- Use double quotes for all strings
+- Escape internal quotes as \"
+- No trailing commas
+- No comments in JSON
+- Rating must be exact category name or null - no variations allowed
+- All required fields must be present - missing fields will cause parsing failure
+
+### General Framing
+**T0** - Overall alcohol framing: How is alcohol generally framed in the article?
+Categories: highly_negative, somewhat_negative, neutral, somewhat_positive, highly_positive
+
+### Content Focus
+**T1** - Alcohol consumption centrality: To what extent is the article about alcohol consumption?
+Categories: marginal_mention, limited_discussion, moderate_focus, major_topic, exclusive_focus
+
+**T2** - Beverage type emphasis: Which alcoholic beverage receives most focus?
+Categories: general_alcohol, wine, beer, spirits, mixed_focus
+
+### Harm Emphasis  
+**T3** - Overall harm focus: How much does the article emphasize alcohol-caused harms?
+Categories: minimal_mention, limited_discussion, moderate_emphasis, major_focus, exclusive_focus
+
+**T4** - Harm type: What type of harm receives most emphasis?
+Categories: social_harm, economic_harm, health_harm, environmental_harm, mixed_harm
+
+**T5** - Specific consequences: Are specific consequences highlighted?
+Categories: crime_focus, accidents_focus, addiction_focus, domestic_issues_focus, multiple_consequences
+
+### Actors and Victims
+**T6** - Victim presentation: Who is presented as victims?
+Categories: general_public, specific_individuals, consumers_themselves, families, mixed_victims
+
+**T7** - Responsibility attribution: Who bears responsibility for problems?
+Categories: individual_responsibility, industry_responsibility, societal_responsibility, government_responsibility, systemic_responsibility
+
+### Expert Voices
+**T8** - Primary voice: Which actor gets most speaking space?
+Categories: industry_voice, official_voice, expert_voice, victim_voice, mixed_voices
+
+**T9** - Expert credibility: How is expertise emphasized?
+Categories: minimal_mention, neutral_presentation, moderate_emphasis, strong_emphasis, exclusive_authority
+
+### Context and Solutions
+**T10** - Consumption context: Where does consumption primarily occur?
+Categories: home_setting, public_venues, public_areas, workplace_setting, mixed_settings
+
+**T11** - Problem framing: How are alcohol problems presented?
+Categories: easily_solvable, somewhat_difficult, complex_issue, inevitable_problem, mixed_framing
+
+**T12** - Solution emphasis: What solutions are emphasized?
+Categories: individual_responsibility, regulation_taxation, education_focus, treatment_focus, other_solutions
+
+### Positive Framing
+**T13** - Positive aspects: Are positive aspects of alcohol emphasized?
+Categories: social_benefits, economic_benefits, cultural_benefits, health_benefits, multiple_benefits
+
+### Article Tone
+**T14** - Neutrality: How neutral is the article's tone?
+Categories: highly_biased, somewhat_biased, somewhat_neutral, largely_neutral, completely_neutral
+
+**T15** - Call to action: Does the article appeal for reader action?
+Categories: subtle_suggestion, moderate_appeal, clear_appeal, strong_appeal, urgent_appeal
+
+### Regulation Focus
+**T16** - Regulation emphasis: How much does the article focus on alcohol regulation?
+Categories: brief_mention, moderate_discussion, significant_focus, major_topic, exclusive_focus
+
+## Coding Instructions
+
+1. **For each theme T0-T16**, provide the exact structure shown above
+2. **If theme is not present**: set "present": false, "rating": null
+3. **If theme is present**: set "present": true, "rating": exact category name from the list
+4. **Citation**: Include relevant quote in original language or empty string if not present
+5. **Explanation**: Maximum 2 sentences explaining your assessment
+6. **Confidence**: Rate as "low", "medium", or "high"
+
+## Critical Requirements for Local LLMs
+
+1. **JSON ONLY**: Your entire response must be valid JSON - no explanatory text before or after
+2. **Exact Structure**: Follow the structure precisely - missing fields will break parsing
+3. **Required Fields**: Every theme must include all 6 fields (question, present, citation, explanation, rating, confidence)
+4. **Data Types**: 
+   - "present": boolean (true/false)
+   - "rating": exact category string or null
+   - "confidence": string ("low"/"medium"/"high")
+5. **Exact Categories**: Use only the exact category names provided - no variations, abbreviations, or new terms
+6. **Quotes**: Use original language for citations, escape quotes properly in JSON
+
+## Example Analysis 1
+
+Input article: "Chelsea Arts Ball: Nejskandálnější novoroční večírek, který úřady navždy zakázaly Přinášíme vám vzácné snímky z konce roku 1947, kdy se v londýnské Royal Albert Hall odehrávala jedna z divokých oslav neblaze proslulého klubu umělců z Chelsea. Tato novoroční party byla po padesát let považována za nejdekadentnější událost společenské sezóny a to až do roku 1958, kdy ji úřady raději úplně zakázaly. A není se čemu divit, na svou dobu byla totiž zábava na těchto večírcích opravdu nevázaná. Do slavné koncertní síně, která tvoří část národního památníku prince Alberta, vždy na konci roku napochodovalo několik tisíc polonahých bohémských umělců. Ty doplnila zvědavá smetánka a také obyčejní Londýňané, všichni navlečeni do rozličných kostýmů. Společně se pak oddávali alkoholu, tvrdým bitkám a veřejnému obnažování. To vše by úřady pravděpodobně přežily, ale novoroční večírky umělců z Chelsea byly rovněž proslulé tím, že se jich účastnili homosexuálové, kteří na nich svou orientaci nijak neskrývali. Homosexualitu přitom ve Velké Británii učinili legální až v roce 1968. V době pořízení fotografií z tohoto článku bylo běžnou praxí zavírat gaye až na dva roky do vězení, či provádět chemickou kastraci. Na proslulé dekadentní party v Royal Albert Hall ale mohli homosexuálové alespoň na chvíli zapomenout na pronásledování úřadů a užívat si života. Zapojovali se tak i do bizarní tradice, ve které umělci dopředu připravili rozličné alegorické vozy, které po krátké přehlídce na parketu, společně opět zničili. A to navzdory tradičním pokusům ochranky o jejich obranu. Jak taková zábava vypadala, si můžete prohlédnout ve fotogalerii."
+
+Output:
+```json
+{
+  "themes": {
+    "T0": {
+      "question": "Overall alcohol framing: How is alcohol generally framed in the article?",
+      "present": true,
+      "citation": "Společně se pak oddávali alkoholu, tvrdým bitkám a veřejnému obnažování.",
+      "explanation": "While not explicitly negative, alcohol is mentioned alongside fights and public disturbances, suggesting a somewhat negative framing despite the historical context.",
+      "rating": "somewhat_negative",
+      "confidence": "medium"
+    },
+    "T1": {
+      "question": "Alcohol consumption centrality: To what extent is the article about alcohol consumption?",
+      "present": true,
+      "citation": "Společně se pak oddávali alkoholu, tvrdým bitkám a veřejnému obnažování.",
+      "explanation": "Alcohol is mentioned as one activity among many at the parties, but the article focuses primarily on the historical context and scandalous nature of the events.",
+      "rating": "limited_discussion",
+      "confidence": "high"
+    },
+    "T2": {
+      "question": "Beverage type emphasis: Which alcoholic beverage receives most focus?",
+      "present": true,
+      "citation": "Společně se pak oddávali alkoholu",
+      "explanation": "The article mentions alcohol in general terms without specifying any particular type of alcoholic beverage.",
+      "rating": "general_alcohol",
+      "confidence": "high"
+    },
+    "T3": {
+      "question": "Overall harm focus: How much does the article emphasize alcohol-caused harms?",
+      "present": false,
+      "citation": "",
+      "explanation": "The article does not discuss any negative consequences or harms specifically caused by alcohol consumption.",
+      "rating": null,
+      "confidence": "high"
+    },
+    "T4": {
+      "question": "Harm type: What type of harm receives most emphasis?",
+      "present": false,
+      "citation": "",
+      "explanation": "No types of harm are attributed to alcohol consumption in the article.",
+      "rating": null,
+      "confidence": "high"
+    },
+    "T5": {
+      "question": "Specific consequences: Are specific consequences highlighted?",
+      "present": false,
+      "citation": "",
+      "explanation": "The article mentions fights but does not establish a causal connection between alcohol and these or other specific consequences.",
+      "rating": null,
+      "confidence": "medium"
+    },
+    "T6": {
+      "question": "Victim presentation: Who is presented as victims?",
+      "present": false,
+      "citation": "",
+      "explanation": "The article does not present anyone as victims of alcohol consumption or alcohol-related problems.",
+      "rating": null,
+      "confidence": "high"
+    },
+    "T7": {
+      "question": "Responsibility attribution: Who bears responsibility for problems?",
+      "present": false,
+      "citation": "",
+      "explanation": "The article does not discuss alcohol-related problems or assign responsibility for such issues.",
+      "rating": null,
+      "confidence": "high"
+    },
+    "T8": {
+      "question": "Primary voice: Which actor gets most speaking space?",
+      "present": false,
+      "citation": "",
+      "explanation": "The article is written in narrative style without direct quotes or speaking space given to any specific actors.",
+      "rating": null,
+      "confidence": "high"
+    },
+    "T9": {
+      "question": "Expert credibility: How is expertise emphasized?",
+      "present": false,
+      "citation": "",
+      "explanation": "The article does not cite any experts or emphasize anyone's expertise regarding alcohol or related topics.",
+      "rating": null,
+      "confidence": "high"
+    },
+    "T10": {
+      "question": "Consumption context: Where does consumption primarily occur?",
+      "present": true,
+      "citation": "Do slavné koncertní síně, která tvoří část národního památníku prince Alberta, vždy na konci roku napochodovalo několik tisíc polonahých bohémských umělců.",
+      "explanation": "The article clearly identifies the Royal Albert Hall as the specific public venue where alcohol consumption occurred during these parties.",
+      "rating": "public_venues",
+      "confidence": "high"
+    },
+    "T11": {
+      "question": "Problem framing: How are alcohol problems presented?",
+      "present": false,
+      "citation": "",
+      "explanation": "The article does not present alcohol consumption as a problem requiring solutions or intervention.",
+      "rating": null,
+      "confidence": "high"
+    },
+    "T12": {
+      "question": "Solution emphasis: What solutions are emphasized?",
+      "present": false,
+      "citation": "",
+      "explanation": "The article does not discuss any solutions to alcohol-related problems as it does not frame alcohol as problematic.",
+      "rating": null,
+      "confidence": "high"
+    },
+    "T13": {
+      "question": "Positive aspects: Are positive aspects of alcohol emphasized?",
+      "present": true,
+      "citation": "Zapojovali se tak i do bizarní tradice, ve které umělci dopředu připravili rozličné alegorické vozy",
+      "explanation": "Alcohol consumption is presented as part of cultural tradition and social celebration at these artistic gatherings.",
+      "rating": "cultural_benefits",
+      "confidence": "medium"
+    },
+    "T14": {
+      "question": "Neutrality: How neutral is the article's tone?",
+      "present": true,
+      "citation": "Přinášíme vám vzácné snímky z konce roku 1947, kdy se v londýnské Royal Albert Hall odehrávala jedna z divokých oslav",
+      "explanation": "The article maintains a largely neutral, historical tone describing the events without making judgmental statements about alcohol consumption.",
+      "rating": "largely_neutral",
+      "confidence": "high"
+    },
+    "T15": {
+      "question": "Call to action: Does the article appeal for reader action?",
+      "present": false,
+      "citation": "",
+      "explanation": "The article is purely descriptive and historical, making no appeals for any action or attitude change regarding alcohol.",
+      "rating": null,
+      "confidence": "high"
+    },
+    "T16": {
+      "question": "Regulation emphasis: How much does the article focus on alcohol regulation?",
+      "present": false,
+      "citation": "",
+      "explanation": "While the article mentions authorities banning the events, it does not focus on alcohol regulation specifically.",
+      "rating": null,
+      "confidence": "medium"
+    }
+  }
+}
+```
+
+## Example Analysis 2
+
+Input article: "Dubaj zrušila třicetiprocentní daň z alkoholu a vyžadovat přestala i poplatek za licenci nutnou k nákupu alkoholu v nákupních a turistických centrech. Na sociálních sítích to oznámily firmy AfricanEastern a MMI, což jsou v Dubaji dva největší dodavatelé alkoholických nápojů. Krok má podle nich podpořit odvětví turistiky. Změny ve zdanění začaly platit v neděli, zkušebně zatím na rok, informují místní média. Dubaj leží ve Spojených arabských emirátech SAE, kde je největším městem. Patří k oblíbeným turistickým cílům i mezi cestovateli z České republiky, láká je mimo jiné volnější životní styl ve srovnání s ostatními lokalitami kolem Perského zálivu. Mnoho cizinců tam z toho důvodu žije dlouhodobě, konkrétně v Dubaji je jich mnohem více než místních. Od doby, co jsme před více než 100 lety začali v Dubaji působit, zůstává přístup emirátu dynamický, citlivý a inkluzivní pro všechny, řekl agentuře AP mluvčí společnosti MMI. Tato nově upravená regulace přispěje k tomu, že bude v Dubaji i v SAE i nadále zajištěný bezpečný a zodpovědný prodej alkoholu, stejně jako jeho konzumace, dodal. Bez třicetiprocentní městské daně a s volnou licencí na prodej alkoholu si tak lidé koupí oblíbené nápoje snáze a levněji než dosud. Společnost MMI na svém instagramovém účtu poznamenala, že ceny v jejích obchodech po celém emirátu již odrážejí zrušení daně. Společnost AfricanEastern potvrdila, že třicetiprocentní daň z alkoholu už přestala platit. Na ceny v obchodech se ale podle ní dál vztahuje pětiprocentní daň z přidané hodnoty. Tiskový odbor vlády v Dubaji se k informacím bezprostředně nevyjádřil. Dubajská ekonomika se z pandemie covidu19 velmi rychle zotavila. Za prvních devět měsíců loňského roku se hrubý domácí produkt meziročně zvýšil o 4,6 procenta. Turistika je přitom klíčovým pilířem hospodářství, za první pololetí loňského roku se počet návštěvníků Dubaje meziročně zvýšil o více než 180 procent. Pravidla prodeje alkoholu Dubaj uvolňuje už delší dobu. Povolila například prodej alkoholu během dne v době postního měsíce ramadánu, za pandemie pak umožnila rozvážku do domácností, uvedla BBC. Nemuslimové, kteří v Dubaji chtějí pít alkohol, musí být starší 21 let. Musí mít u sebe také licenci, která je k pití opravňuje. Tato licence má podobu plastové karty, kterou vydává policie. Tento článek máteje zdarma. Když si předplatíte HN, budete moci číst všechny naše články nejen na vašem aktuálním připojení. Vaše předplatné brzy skončí. Předplaťte si HN a můžete i nadále číst všechny naše články. Nyní první 2 měsíce jen za 40 Kč. - Veškerý obsah HN.cz - Možnost kdykoliv zrušit - Odemykejte obsah pro přátele - Ukládejte si články na později - Všechny články v audioverzi playlist"
+
+Output:
+```json
+{
+  "themes": {
+    "T0": {
+      "question": "Overall alcohol framing: How is alcohol generally framed in the article?",
+      "present": true,
+      "citation": "Krok má podle nich podpořit odvětví turistiky.",
+      "explanation": "Alcohol is framed positively as part of economic development and tourism support. The regulatory changes are presented as beneficial improvements.",
+      "rating": "somewhat_positive",
+      "confidence": "high"
+    },
+    "T1": {
+      "question": "Alcohol consumption centrality: To what extent is the article about alcohol consumption?",
+      "present": true,
+      "citation": "Dubaj zrušila třicetiprocentní daň z alkoholu a vyžadovat přestala i poplatek za licenci nutnou k nákupu alkoholu",
+      "explanation": "The entire article focuses exclusively on alcohol regulation changes and their impact on availability and pricing in Dubai.",
+      "rating": "exclusive_focus",
+      "confidence": "high"
+    },
+    "T2": {
+      "question": "Beverage type emphasis: Which alcoholic beverage receives most focus?",
+      "present": true,
+      "citation": "alkoholických nápojů",
+      "explanation": "The article discusses alcohol in general terms without specifying particular types of alcoholic beverages.",
+      "rating": "general_alcohol",
+      "confidence": "high"
+    },
+    "T3": {
+      "question": "Overall harm focus: How much does the article emphasize alcohol-caused harms?",
+      "present": false,
+      "citation": "",
+      "explanation": "The article does not discuss any harms or negative consequences related to alcohol consumption.",
+      "rating": null,
+      "confidence": "high"
+    },
+    "T4": {
+      "question": "Harm type: What type of harm receives most emphasis?",
+      "present": false,
+      "citation": "",
+      "explanation": "No types of harm are mentioned or emphasized in the article.",
+      "rating": null,
+      "confidence": "high"
+    },
+    "T5": {
+      "question": "Specific consequences: Are specific consequences highlighted?",
+      "present": false,
+      "citation": "",
+      "explanation": "The article does not highlight any specific negative consequences of alcohol consumption.",
+      "rating": null,
+      "confidence": "high"
+    },
+    "T6": {
+      "question": "Victim presentation: Who is presented as victims?",
+      "present": false,
+      "citation": "",
+      "explanation": "No victims are presented in relation to alcohol consumption or policy.",
+      "rating": null,
+      "confidence": "high"
+    },
+    "T7": {
+      "question": "Responsibility attribution: Who bears responsibility for problems?",
+      "present": false,
+      "citation": "",
+      "explanation": "The article does not discuss alcohol-related problems or assign responsibility for such issues.",
+      "rating": null,
+      "confidence": "high"
+    },
+    "T8": {
+      "question": "Primary voice: Which actor gets most speaking space?",
+      "present": true,
+      "citation": "Od doby, co jsme před více než 100 lety začali v Dubaji působit, zůstává přístup emirátu dynamický, citlivý a inkluzivní pro všechny, řekl agentuře AP mluvčí společnosti MMI.",
+      "explanation": "The alcohol industry representatives (MMI spokesperson) get the most direct quotes and speaking space in the article.",
+      "rating": "industry_voice",
+      "confidence": "high"
+    },
+    "T9": {
+      "question": "Expert credibility: How is expertise emphasized?",
+      "present": true,
+      "citation": "řekl agentuře AP mluvčí společnosti MMI",
+      "explanation": "Industry representatives are quoted but their expertise is not particularly emphasized beyond their role as spokespersons.",
+      "rating": "neutral_presentation",
+      "confidence": "medium"
+    },
+    "T10": {
+      "question": "Consumption context: Where does consumption primarily occur?",
+      "present": true,
+      "citation": "v nákupních a turistických centrech",
+      "explanation": "The article mentions both retail purchases and home delivery, indicating mixed consumption contexts.",
+      "rating": "mixed_settings",
+      "confidence": "high"
+    },
+    "T11": {
+      "question": "Problem framing: How are alcohol problems presented?",
+      "present": false,
+      "citation": "",
+      "explanation": "The article does not present alcohol as a problem requiring solutions.",
+      "rating": null,
+      "confidence": "high"
+    },
+    "T12": {
+      "question": "Solution emphasis: What solutions are emphasized?",
+      "present": false,
+      "citation": "",
+      "explanation": "The article focuses on deregulation rather than solutions to alcohol problems.",
+      "rating": null,
+      "confidence": "high"
+    },
+    "T13": {
+      "question": "Positive aspects: Are positive aspects of alcohol emphasized?",
+      "present": true,
+      "citation": "Krok má podle nich podpořit odvětví turistiky",
+      "explanation": "The article emphasizes the economic benefits of alcohol availability for tourism and business development.",
+      "rating": "economic_benefits",
+      "confidence": "high"
+    },
+    "T14": {
+      "question": "Neutrality: How neutral is the article's tone?",
+      "present": true,
+      "citation": "informují místní média",
+      "explanation": "The article maintains a largely neutral, informative tone while reporting on the policy changes and their context.",
+      "rating": "largely_neutral",
+      "confidence": "high"
+    },
+    "T15": {
+      "question": "Call to action: Does the article appeal for reader action?",
+      "present": false,
+      "citation": "",
+      "explanation": "The article is purely informative and does not make any appeals for reader action regarding alcohol policy or consumption.",
+      "rating": null,
+      "confidence": "high"
+    },
+    "T16": {
+      "question": "Regulation emphasis: How much does the article focus on alcohol regulation?",
+      "present": true,
+      "citation": "Dubaj zrušila třicetiprocentní daň z alkoholu a vyžadovat přestala i poplatek za licenci",
+      "explanation": "The entire article is focused exclusively on changes to alcohol regulation, taxation, and licensing requirements in Dubai.",
+      "rating": "exclusive_focus",
+      "confidence": "high"
+    }
+  }
+}
+```
+
+Input text: {{ARTICLE_TEXT}}
+
+Now analyze the following article using the same format and structure as described above.
+
+Remember: Your response will be parsed as JSON. Any deviation from this format will cause processing errors.

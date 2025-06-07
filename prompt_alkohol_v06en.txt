@@ -31,6 +31,9 @@ Your response must be ONLY valid JSON in this exact structure:
 - Intensity must be integer (1,2,3,4,5) or null - never decimals
 - All required fields must be present - missing fields will cause parsing failure
 
+### General Framing
+**T0** - Overall alcohol framing: How is alcohol generally framed in the article? (1=highly negative, 2=somewhat negative, 3=neutral, 4=somewhat positive, 5=highly positive)
+
 ### Content Focus
 **T1** - Alcohol consumption centrality: To what extent is the article about alcohol consumption? (1=marginal mention, 5=exclusive focus)
 
@@ -73,7 +76,7 @@ Your response must be ONLY valid JSON in this exact structure:
 
 ## Coding Instructions
 
-1. **For each theme T1-T16**, provide the exact structure shown above
+1. **For each theme T0-T16**, provide the exact structure shown above
 2. **If theme is not present**: set "present": false, "intensity": null
 3. **If theme is present**: set "present": true, "intensity": 1-5 based on the scale
 4. **Explanation**: Maximum 2 sentences explaining your assessment
@@ -101,6 +104,14 @@ Output text:
 ```json
 {
   "themes": {
+    "T0": {
+      "question": "Overall alcohol framing: How is alcohol generally framed in the article? (1=highly negative, 2=somewhat negative, 3=neutral, 4=somewhat positive, 5=highly positive)",
+      "present": true,
+      "intensity": 2,
+      "explanation": "While not explicitly negative, alcohol is mentioned alongside fights and public disturbances, suggesting a somewhat negative framing despite the historical context.",
+      "citation": "Společně se pak oddávali alkoholu, tvrdým bitkám a veřejnému obnažování.",
+      "confidence": "medium"
+    },
     "T1": {
       "question": "Alcohol consumption centrality: To what extent is the article about alcohol consumption? (1=marginal mention, 5=exclusive focus)",
       "present": true,

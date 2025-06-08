@@ -37,7 +37,7 @@ Your response must be ONLY valid JSON in this exact structure:
 ## Question Types
 
 ### SCALE QUESTIONS (T1-T3, T5-T11, T15-T18)
-For scale questions, options are numbered 1-5. If the theme is not present or cannot be assessed, use "NA" as the rating.
+For scale questions, options are numbered 1-5. If the theme is not present or cannot be assessed, use "NA" as the rating. However, prefer making an informed judgment with "low" confidence when any relevant context exists.
 
 ### CATEGORICAL QUESTIONS (T4, T19)
 For categorical questions, provide a list of all applicable options (a, b, c, etc.). If none apply, use "NA".
@@ -115,7 +115,10 @@ Scale: 1: "purely_pragmatic", 2: "mostly_pragmatic", 3: "balanced", 4: "mostly_m
 ## Coding Instructions
 
 1. **For each theme T1-T20**, provide the exact structure shown above
-2. **If theme is not present**: set "present": false, "rating_label": "NA", "rating_value": "NA"
+2. **Determining presence**: 
+   - Set "present": true if there's ANY relevant information, even indirect
+   - Set "present": false ONLY if the theme is completely absent
+   - When "present": false, use "rating_label": "NA", "rating_value": "NA"
 3. **If theme is present**: set "present": true, then:
    - For scales: "rating_label": exact string from scale, "rating_value": corresponding number (1-5)
    - For categorical: "rating_label": list of exact option strings, "rating_value": list of corresponding letters
@@ -123,13 +126,18 @@ Scale: 1: "purely_pragmatic", 2: "mostly_pragmatic", 3: "balanced", 4: "mostly_m
 5. **Citation**: Include relevant quote in original language or empty string if not present
 6. **Explanation**: Maximum 2 sentences explaining your assessment
 7. **Confidence**: Rate as "low", "medium", or "high"
+8. **NA Usage Guidelines**: 
+   - Use NA ONLY when the theme is completely absent from the article
+   - If there are subtle implications, indirect references, or contextual clues, code them at the appropriate level with "low" confidence
+   - It is better to make an informed judgment with "low" confidence than to use NA
+   - Example: If alcohol is mentioned in passing as part of a social gathering, still code T6 (social impact) even with low confidence
 
 ## Critical Requirements
 
 1. **JSON ONLY**: Your entire response must be valid JSON - no explanatory text before or after
 2. **Exact Structure**: Follow the structure precisely - missing fields will break parsing
 3. **Required Fields**: Every theme must include all 7 fields (question, present, citation, explanation, rating_label, rating_value, confidence)
-4. **Use "NA" appropriately**: When information is not available or theme not present, use "NA" for both rating fields
+4. **Minimize NA usage**: Only use "NA" when the theme is completely absent. If you can detect any subtle implications or indirect references, code them with "low" confidence rather than using NA
 5. **Exact matching**: rating_label must use EXACT strings from the options - no synonyms or variations
 6. **Consistency**: rating_label and rating_value MUST correspond to the same option (e.g., "neutral" with "3", not "neutral" with "4")
 7. **Quotes**: Use original language for citations, escape quotes properly in JSON
@@ -336,5 +344,12 @@ Output:
 Input text: {{ARTICLE_TEXT}}
 
 Now analyze the following article using the same format and structure as described above.
+
+## CRITICAL REMINDERS:
+- Your response must be ONLY valid JSON - no other text
+- Prefer coding with "low" confidence over using NA when any relevant information exists
+- Use exact rating_label strings from the categories - no variations allowed
+- Both rating_label and rating_value must correspond to the same option
+- Read the entire article before beginning coding
 
 Remember: Your response will be parsed as JSON. Any deviation from this format will cause processing errors.

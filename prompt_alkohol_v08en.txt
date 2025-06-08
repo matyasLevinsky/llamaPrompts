@@ -1,0 +1,340 @@
+# Refined Alcohol Media Coding Instructions
+
+You are a qualitative sociologist coding media texts about alcohol using framing theory principles.
+
+## Core Task
+Analyze the provided article and code it according to the themes below. Each theme requires a structured assessment.
+
+## Response Format
+Your response must be ONLY valid JSON in this exact structure:
+
+```json
+{
+  "themes": {
+    "theme_id": {
+      "question": "exact theme question",
+      "present": true/false,
+      "citation": "relevant quote or empty string",
+      "explanation": "brief justification (max 2 sentences)",
+      "rating_label": "exact category string or NA",
+      "rating_value": "number/letters or NA",
+      "confidence": "low/medium/high"
+    }
+  }
+}
+```
+
+## JSON Validation Requirements
+- Use double quotes for all strings
+- Escape internal quotes as \"
+- No trailing commas
+- No comments in JSON
+- Both rating_label and rating_value must match exactly - no variations allowed
+- rating_label must use the EXACT string from the categories (e.g., "purely_moral" not "very_moral")
+- rating_value must use the EXACT number or letter provided
+- All required fields must be present - missing fields will cause parsing failure
+
+## Question Types
+
+### SCALE QUESTIONS (T1-T3, T5-T11, T15-T18)
+For scale questions, options are numbered 1-5. If the theme is not present or cannot be assessed, use "NA" as the rating.
+
+### CATEGORICAL QUESTIONS (T4, T19)
+For categorical questions, provide a list of all applicable options (a, b, c, etc.). If none apply, use "NA".
+
+## Themes
+
+### Temporal Context
+**T1** - Temporal framing: What time period does the article primarily discuss?
+Scale: 1: "past", 2: "recent_past", 3: "contemporary_issues", 4: "news", 5: "future_prognosis", NA: "not_specified"
+
+### Overall Framing
+**T2** - Overall tone: What is the general sentiment of the article?
+Scale: 1: "positive_sentiment", 2: "somewhat_positive", 3: "neutral", 4: "somewhat_negative", 5: "negative_sentiment", NA: "unclear"
+
+**T3** - Alcohol framing: How is alcohol generally framed in the article?
+Scale: 1: "highly_positive", 2: "somewhat_positive", 3: "neutral", 4: "somewhat_negative", 5: "highly_negative", NA: "not_discussed"
+
+### Content Focus
+**T4** - Alcohol centrality: To what extent is the article about alcohol consumption or being under influence?
+Scale: 1: "marginal_mention", 2: "limited_discussion", 3: "moderate_focus", 4: "major_topic", 5: "exclusive_focus", NA: "not_mentioned"
+
+**T5** - Beverage type (CATEGORICAL): Which types of alcohol are mentioned?
+Categories: a: "beer" (includes brands, types, non-alcoholic beer, cider), b: "wine" (all types), c: "spirits" (distilled beverages), d: "general_alcohol" (no specific type), e: "technical_alcohol" (industrial, pharmaceutical, non-consumption uses), NA: "none_mentioned"
+
+### Impact Axes
+**T6** - Social impact: How is alcohol's effect on social life framed?
+Scale: 1: "socially_positive", 2: "somewhat_socially_positive", 3: "socially_neutral", 4: "somewhat_socially_negative", 5: "socially_negative", NA: "not_discussed"
+
+**T7** - Health impact: How is alcohol's health effect framed?
+Scale: 1: "beneficial", 2: "somewhat_beneficial", 3: "health_neutral", 4: "somewhat_harmful", 5: "harmful", NA: "not_discussed"
+
+**T8** - Economic impact: How is alcohol framed economically?
+Scale: 1: "fiscally_positive", 2: "somewhat_fiscally_positive", 3: "economically_neutral", 4: "somewhat_fiscally_negative", 5: "fiscally_negative", NA: "not_discussed"
+
+### Distribution of Effects
+**T9** - Benefit distribution: How broadly are positive benefits distributed?
+Scale: 1: "small_group", 2: "limited_group", 3: "moderate_distribution", 4: "broad_distribution", 5: "society_wide", NA: "no_benefits_mentioned"
+
+**T10** - Harm distribution: How broadly are negative consequences distributed?
+Scale: 1: "isolated_individuals", 2: "limited_group", 3: "moderate_distribution", 4: "broad_distribution", 5: "society_wide", NA: "no_harms_mentioned"
+
+### Responsibility and Voice
+**T11** - Responsibility attribution: Who should handle alcohol-related issues?
+Scale: 1: "individual_only", 2: "mainly_individual", 3: "shared_responsibility", 4: "mainly_state", 5: "state_only", NA: "not_discussed"
+
+**T12** - Consumer voice: How are alcohol consumers portrayed?
+Scale: 1: "passive_mention", 2: "limited_presence", 3: "moderate_voice", 4: "active_speakers", 5: "fully_humanized", NA: "not_mentioned"
+
+**T13** - Victim voice: How are those affected by alcohol portrayed?
+Scale: 1: "passive_mention", 2: "limited_presence", 3: "moderate_voice", 4: "active_speakers", 5: "fully_humanized", NA: "not_mentioned"
+
+**T14** - Industry voice: How are alcohol producers/sellers portrayed?
+Scale: 1: "passive_mention", 2: "limited_presence", 3: "moderate_voice", 4: "active_speakers", 5: "fully_humanized", NA: "not_mentioned"
+
+**T15** - Speaker authority: How much authority/credibility is given to non-layperson voices (experts, officials, spokespersons)?
+Scale: 1: "equal_to_laymen", 2: "slightly_elevated", 3: "moderately_elevated", 4: "highly_authoritative", 5: "unquestionable_authority", NA: "no_non_layperson_voices"
+
+### Context and Solutions
+**T16** - Consumption location: Where does alcohol consumption occur?
+Scale: 1: "home_alone", 2: "private_gathering", 3: "semi_private_space", 4: "designated_public_space", 5: "public_space", NA: "not_specified"
+
+**T17** - Regulation support: Does the article support regulatory changes?
+Scale: 1: "questions_changes", 2: "doubts_efficiency", 3: "no_opinion", 4: "encourages_changes", 5: "suggests_changes", NA: "not_discussed"
+
+**T18** - Problem entrenchment: How changeable is the alcohol issue presented?
+Scale: 1: "unchangeable", 2: "very_difficult", 3: "challenging", 4: "manageable", 5: "easy_to_alter", NA: "not_discussed"
+
+**T19** - Solution emphasis (CATEGORICAL): What solutions are suggested?
+Categories: a: "non_tax_regulation", b: "consumer_education", c: "tax_regulation", d: "treatment", e: "industry_self_regulation", f: "cultural_change", g: "no_solution_proposed", NA: "not_applicable"
+
+### Framing Type
+**T20** - Moral vs pragmatic: Is the framing moral or pragmatic?
+Scale: 1: "purely_pragmatic", 2: "mostly_pragmatic", 3: "balanced", 4: "mostly_moral", 5: "purely_moral", NA: "unclear_framing"
+
+## Coding Instructions
+
+1. **For each theme T1-T20**, provide the exact structure shown above
+2. **If theme is not present**: set "present": false, "rating_label": "NA", "rating_value": "NA"
+3. **If theme is present**: set "present": true, then:
+   - For scales: "rating_label": exact string from scale, "rating_value": corresponding number (1-5)
+   - For categorical: "rating_label": list of exact option strings, "rating_value": list of corresponding letters
+4. **Consistency check**: The rating_label and rating_value MUST correspond to the same option
+5. **Citation**: Include relevant quote in original language or empty string if not present
+6. **Explanation**: Maximum 2 sentences explaining your assessment
+7. **Confidence**: Rate as "low", "medium", or "high"
+
+## Critical Requirements
+
+1. **JSON ONLY**: Your entire response must be valid JSON - no explanatory text before or after
+2. **Exact Structure**: Follow the structure precisely - missing fields will break parsing
+3. **Required Fields**: Every theme must include all 7 fields (question, present, citation, explanation, rating_label, rating_value, confidence)
+4. **Use "NA" appropriately**: When information is not available or theme not present, use "NA" for both rating fields
+5. **Exact matching**: rating_label must use EXACT strings from the options - no synonyms or variations
+6. **Consistency**: rating_label and rating_value MUST correspond to the same option (e.g., "neutral" with "3", not "neutral" with "4")
+7. **Quotes**: Use original language for citations, escape quotes properly in JSON
+
+### Validation Examples
+VALID: "rating_label": "purely_moral", "rating_value": "5"
+INVALID: "rating_label": "very_moral", "rating_value": "5" (wrong label text)
+INVALID: "rating_label": "purely_moral", "rating_value": "4" (mismatched value)
+VALID: "rating_label": ["beer", "wine"], "rating_value": ["a", "b"]
+INVALID: "rating_label": ["beer", "vino"], "rating_value": ["a", "b"] (non-standard label)
+
+## Example Analysis
+
+Input article: "Dubaj zrušila třicetiprocentní daň z alkoholu a vyžadovat přestala i poplatek za licenci nutnou k nákupu alkoholu v nákupních a turistických centrech. Na sociálních sítích to oznámily firmy AfricanEastern a MMI, což jsou v Dubaji dva největší dodavatelé alkoholických nápojů. Krok má podle nich podpořit odvětví turistiky. Změny ve zdanění začaly platit v neděli, zkušebně zatím na rok, informují místní média. Dubaj leží ve Spojených arabských emirátech SAE, kde je největším městem. Patří k oblíbeným turistickým cílům i mezi cestovateli z České republiky, láká je mimo jiné volnější životní styl ve srovnání s ostatními lokalitami kolem Perského zálivu. Mnoho cizinců tam z toho důvodu žije dlouhodobě, konkrétně v Dubaji je jich mnohem více než místních. Od doby, co jsme před více než 100 lety začali v Dubaji působit, zůstává přístup emirátu dynamický, citlivý a inkluzivní pro všechny, řekl agentuře AP mluvčí společnosti MMI. Tato nově upravená regulace přispěje k tomu, že bude v Dubaji i v SAE i nadále zajištěný bezpečný a zodpovědný prodej alkoholu, stejně jako jeho konzumace, dodal. Bez třicetiprocentní městské daně a s volnou licencí na prodej alkoholu si tak lidé koupí oblíbené nápoje snáze a levněji než dosud. Společnost MMI na svém instagramovém účtu poznamenala, že ceny v jejích obchodech po celém emirátu již odrážejí zrušení daně. Společnost AfricanEastern potvrdila, že třicetiprocentní daň z alkoholu už přestala platit. Na ceny v obchodech se ale podle ní dál vztahuje pětiprocentní daň z přidané hodnoty. Tiskový odbor vlády v Dubaji se k informacím bezprostředně nevyjádřil. Dubajská ekonomika se z pandemie covidu19 velmi rychle zotavila. Za prvních devět měsíců loňského roku se hrubý domácí produkt meziročně zvýšil o 4,6 procenta. Turistika je přitom klíčovým pilířem hospodářství, za první pololetí loňského roku se počet návštěvníků Dubaje meziročně zvýšil o více než 180 procent. Pravidla prodeje alkoholu Dubaj uvolňuje už delší dobu. Povolila například prodej alkoholu během dne v době postního měsíce ramadánu, za pandemie pak umožnila rozvážku do domácností, uvedla BBC. Nemuslimové, kteří v Dubaji chtějí pít alkohol, musí být starší 21 let. Musí mít u sebe také licenci, která je k pití opravňuje. Tato licence má podobu plastové karty, kterou vydává policie."
+
+Output:
+```json
+{
+  "themes": {
+    "T1": {
+      "question": "Temporal framing: What time period does the article primarily discuss?",
+      "present": true,
+      "citation": "Změny ve zdanění začaly platit v neděli",
+      "explanation": "The article discusses current news about recent policy changes that just took effect.",
+      "rating_label": "news",
+      "rating_value": "4",
+      "confidence": "high"
+    },
+    "T2": {
+      "question": "Overall tone: What is the general sentiment of the article?",
+      "present": true,
+      "citation": "Krok má podle nich podpořit odvětví turistiky",
+      "explanation": "The article presents the changes positively as beneficial for tourism and economic development.",
+      "rating_label": "somewhat_positive",
+      "rating_value": "2",
+      "confidence": "high"
+    },
+    "T3": {
+      "question": "Alcohol framing: How is alcohol generally framed in the article?",
+      "present": true,
+      "citation": "zajištěný bezpečný a zodpovědný prodej alkoholu",
+      "explanation": "Alcohol is framed positively as part of tourism and economic growth, with emphasis on responsible consumption.",
+      "rating_label": "somewhat_positive",
+      "rating_value": "2",
+      "confidence": "high"
+    },
+    "T4": {
+      "question": "Alcohol centrality: To what extent is the article about alcohol consumption or being under influence?",
+      "present": true,
+      "citation": "Dubaj zrušila třicetiprocentní daň z alkoholu",
+      "explanation": "The entire article focuses exclusively on alcohol regulation, taxation, and availability.",
+      "rating_label": "exclusive_focus",
+      "rating_value": "5",
+      "confidence": "high"
+    },
+    "T5": {
+      "question": "Beverage type: Which types of alcohol are mentioned?",
+      "present": true,
+      "citation": "alkoholických nápojů",
+      "explanation": "The article refers to alcohol in general terms without specifying particular types of beverages.",
+      "rating_label": ["general_alcohol"],
+      "rating_value": ["d"],
+      "confidence": "high"
+    },
+    "T6": {
+      "question": "Social impact: How is alcohol's effect on social life framed?",
+      "present": true,
+      "citation": "volnější životní styl ve srovnání s ostatními lokalitami",
+      "explanation": "Alcohol availability is linked to a more relaxed lifestyle that attracts tourists and expatriates.",
+      "rating_label": "somewhat_socially_positive",
+      "rating_value": "2",
+      "confidence": "medium"
+    },
+    "T7": {
+      "question": "Health impact: How is alcohol's health effect framed?",
+      "present": false,
+      "citation": "",
+      "explanation": "The article does not discuss health impacts of alcohol consumption.",
+      "rating_label": "NA",
+      "rating_value": "NA",
+      "confidence": "high"
+    },
+    "T8": {
+      "question": "Economic impact: How is alcohol framed economically?",
+      "present": true,
+      "citation": "Krok má podle nich podpořit odvětví turistiky",
+      "explanation": "Alcohol deregulation is presented as economically beneficial for tourism and business growth.",
+      "rating_label": "fiscally_positive",
+      "rating_value": "1",
+      "confidence": "high"
+    },
+    "T9": {
+      "question": "Benefit distribution: How broadly are positive benefits distributed?",
+      "present": true,
+      "citation": "lidé koupí oblíbené nápoje snáze a levněji než dosud",
+      "explanation": "Benefits are presented as widely distributed to tourists, residents, and the broader economy.",
+      "rating_label": "broad_distribution",
+      "rating_value": "4",
+      "confidence": "high"
+    },
+    "T10": {
+      "question": "Harm distribution: How broadly are negative consequences distributed?",
+      "present": false,
+      "citation": "",
+      "explanation": "The article does not mention any negative consequences or harms from alcohol.",
+      "rating_label": "NA",
+      "rating_value": "NA",
+      "confidence": "high"
+    },
+    "T11": {
+      "question": "Responsibility attribution: Who should handle alcohol-related issues?",
+      "present": true,
+      "citation": "bezpečný a zodpovědný prodej alkoholu",
+      "explanation": "The article suggests a balance between state regulation and industry responsibility for safe alcohol sales.",
+      "rating_label": "shared_responsibility",
+      "rating_value": "3",
+      "confidence": "medium"
+    },
+    "T12": {
+      "question": "Consumer voice: How are alcohol consumers portrayed?",
+      "present": true,
+      "citation": "Nemuslimové, kteří v Dubaji chtějí pít alkohol",
+      "explanation": "Consumers are mentioned passively as beneficiaries of the policy changes without direct voice.",
+      "rating_label": "passive_mention",
+      "rating_value": "1",
+      "confidence": "high"
+    },
+    "T13": {
+      "question": "Victim voice: How are those affected by alcohol portrayed?",
+      "present": false,
+      "citation": "",
+      "explanation": "No victims or negatively affected persons are mentioned in the article.",
+      "rating_label": "NA",
+      "rating_value": "NA",
+      "confidence": "high"
+    },
+    "T14": {
+      "question": "Industry voice: How are alcohol producers/sellers portrayed?",
+      "present": true,
+      "citation": "řekl agentuře AP mluvčí společnosti MMI",
+      "explanation": "Industry representatives are given significant voice through direct quotes and statements.",
+      "rating_label": "active_speakers",
+      "rating_value": "4",
+      "confidence": "high"
+    },
+    "T15": {
+      "question": "Speaker authority: How much authority/credibility is given to non-layperson voices (experts, officials, spokespersons)?",
+      "present": true,
+      "citation": "řekl agentuře AP mluvčí společnosti MMI",
+      "explanation": "Industry spokespersons are quoted as authoritative sources on the policy changes and their impacts.",
+      "rating_label": "moderately_elevated",
+      "rating_value": "3",
+      "confidence": "high"
+    },
+    "T16": {
+      "question": "Consumption location: Where does alcohol consumption occur?",
+      "present": true,
+      "citation": "v nákupních a turistických centrech",
+      "explanation": "The article mentions various settings including retail locations and home delivery options.",
+      "rating_label": "semi_private_space",
+      "rating_value": "3",
+      "confidence": "medium"
+    },
+    "T17": {
+      "question": "Regulation support: Does the article support regulatory changes?",
+      "present": true,
+      "citation": "Pravidla prodeje alkoholu Dubaj uvolňuje už delší dobu",
+      "explanation": "The article presents deregulation neutrally to positively, describing it as part of ongoing liberalization.",
+      "rating_label": "no_opinion",
+      "rating_value": "3",
+      "confidence": "high"
+    },
+    "T18": {
+      "question": "Problem entrenchment: How changeable is the alcohol issue presented?",
+      "present": true,
+      "citation": "zkušebně zatím na rok",
+      "explanation": "The policy changes are presented as easily implementable trials, suggesting alcohol regulation is manageable.",
+      "rating_label": "manageable",
+      "rating_value": "4",
+      "confidence": "medium"
+    },
+    "T19": {
+      "question": "Solution emphasis: What solutions are suggested?",
+      "present": true,
+      "citation": "Dubaj zrušila třicetiprocentní daň z alkoholu",
+      "explanation": "The article focuses on deregulation and reduced taxation as policy approaches.",
+      "rating_label": ["non_tax_regulation", "tax_regulation"],
+      "rating_value": ["a", "c"],
+      "confidence": "high"
+    },
+    "T20": {
+      "question": "Moral vs pragmatic: Is the framing moral or pragmatic?",
+      "present": true,
+      "citation": "Krok má podle nich podpořit odvětví turistiky",
+      "explanation": "The article frames alcohol policy purely in economic and practical terms without moral judgments.",
+      "rating_label": "purely_pragmatic",
+      "rating_value": "1",
+      "confidence": "high"
+    }
+  }
+}
+```
+
+Input text: {{ARTICLE_TEXT}}
+
+Now analyze the following article using the same format and structure as described above.
+
+Remember: Your response will be parsed as JSON. Any deviation from this format will cause processing errors.
